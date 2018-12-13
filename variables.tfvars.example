@@ -1,0 +1,26 @@
+# AWS Access Key for the account
+aws_access_key = ""
+
+# AWS Secret Key for the account
+aws_secret_key = ""
+
+# Prefix for each resource created
+name_tag_prefix = ""
+
+# AWS Region to create the infrastructure in
+aws_region = ""
+
+# AWS CLI profile to use
+aws_provider_profile = "default"
+
+# AWS Security Group Name for Primary GHE instance
+aws_sg_ghe_name = ""
+
+# Local path to the private key for the AWS EC2 Keypair
+private_key_path = ""
+
+# This is the name of the key pair to use within AWS EC2
+key_name = ""
+
+# Version of GHE AWS AMI to use
+ghe_version = ""
