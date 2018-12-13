@@ -23,11 +23,6 @@ variable "subnet_id" {
     type = "string"
 }
 
-variable "ghe-instance-profile-id" {
-    description = "The AWS EC2 instance profile ID to associate to the GHE EC2 instance"
-    type = "string"
-}
-
 variable "ghe-sg-id" {
     description = "The AWS EC2 Security Group ID"
     type = "string"

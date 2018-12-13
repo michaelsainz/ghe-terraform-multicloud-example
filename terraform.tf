@@ -24,7 +24,9 @@ module "vpc" {
 
   name_tag_prefix = "${var.name_tag_prefix}"
   network_address_space = "${var.network_address_space}"
+  aws_sg_ghe_name = "${var.aws_sg_ghe_name}"
 }
+
 
 module "ghe-instance" {
   source = "./modules/aws/ghe-instance"
@@ -34,7 +36,15 @@ module "ghe-instance" {
   name_tag_prefix = "${var.name_tag_prefix}"
   key_name = "${var.key_name}"
   subnet_id = "${module.vpc.subnet_id}"
-  ghe-instance-profile-id = "${module.iam-roles-policies.ghe-instance-profile-id}"
-  ghe-sg-id = "${module.iam-roles-policies.ghe-sg-id}"
+  ghe-sg-id = "${module.vpc.ghe-sg-id}"
   private_key_path = "${var.private_key_path}"
 }
+
+/*
+module "iam-roles-policies" {
+  source = "./modules/aws/iam"
+
+  aws_sg_ghe_name = "${var.aws_sg_ghe_name}"
+  aws_vpc_id = "${module.vpc.vpc_id}"
+}
+*/

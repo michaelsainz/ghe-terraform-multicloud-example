@@ -25,7 +25,6 @@ resource "aws_instance" "ec2_ghe" {
   ami                  = "${data.aws_ami.GHE.image_id}"
   instance_type        = "m4.xlarge"
   key_name             = "${var.key_name}"
-  iam_instance_profile = "${var.ghe-instance-profile-id}"
 
   network_interface {
     device_index          = 0
