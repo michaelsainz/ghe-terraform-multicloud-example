@@ -37,16 +37,11 @@ variable "ghe_version" {
     type = "string"
 }
 
-variable "key_name" {
+variable "ec2_key_name" {
     description = "This is the name of the key pair to use within AWS EC2"
     type = "string"
 }
-/*
-variable "ghe-sg-id" {
-    description = "The AWS EC2 Security Group ID"
-    type = "string"
-}
-*/
+
 variable "private_key_path" {
     description = "The local path to the private key file matching the AWS EC2 key pair"
 }
@@ -55,4 +50,16 @@ variable "aws_sg_ghe_name" {
     description = "Security group for the GHE instance"
     type = "string"
     default = "GHE-Primary-SecurityGroup"
+}
+
+variable "aws_instance_type" {
+    description = "The EC2 Instance Type for the primary GHE instance"
+    type = "string"
+    default = "m4.xlarge"
+}
+
+variable "aws_az" {
+    description = "The AWS availability zone for resources to be configured in"
+    type = "string"
+    default = "us-west-1a"
 }

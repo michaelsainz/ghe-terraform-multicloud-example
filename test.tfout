@@ -1,0 +1,35 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.9",
+    "serial": 17,
+    "lineage": "788452f1-cd22-0b54-cc01-54fa09082359",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "ghe-primary"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "ghe-primary",
+                "aws_vpc"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        }
+    ]
+}
